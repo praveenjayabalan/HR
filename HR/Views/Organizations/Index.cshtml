@@ -1,0 +1,81 @@
+﻿@model IEnumerable<HR.Models.HR.Organization>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Organization_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organization_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Actv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Del)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crtd_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crtd_ts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mod_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mod_ts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organization_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organization_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Actv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Del)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crtd_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crtd_ts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mod_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mod_ts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RowVersion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OrganizationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OrganizationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OrganizationID })
+        </td>
+    </tr>
+}
+
+</table>

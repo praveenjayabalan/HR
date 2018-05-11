@@ -190,12 +190,43 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\DesignationsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\EmployeeTypesController.cs" />
+    <Compile Include="Controllers\HolidaysController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrganizationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\HrMigrations\201805101140026_InitialCreate.cs" />
+    <Compile Include="Migrations\HrMigrations\201805101140026_InitialCreate.Designer.cs">
+      <DependentUpon>201805101140026_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\HrMigrations\201805101512088_HolidayAdded.cs" />
+    <Compile Include="Migrations\HrMigrations\201805101512088_HolidayAdded.Designer.cs">
+      <DependentUpon>201805101512088_HolidayAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\HrMigrations\201805101519130_holiday_Yearadded.cs" />
+    <Compile Include="Migrations\HrMigrations\201805101519130_holiday_Yearadded.Designer.cs">
+      <DependentUpon>201805101519130_holiday_Yearadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\HrMigrations\Configuration.cs" />
+    <Compile Include="Migrations\Identity\201805101414129_Initial_Identity.cs" />
+    <Compile Include="Migrations\Identity\201805101414129_Initial_Identity.Designer.cs">
+      <DependentUpon>201805101414129_Initial_Identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Identity\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HR\Department.cs" />
+    <Compile Include="Models\HR\Designation.cs" />
+    <Compile Include="Models\HR\Employee.cs" />
+    <Compile Include="Models\HR\EmployeeDBContext.cs" />
+    <Compile Include="Models\HR\EmployeeType.cs" />
+    <Compile Include="Models\HR\Holiday.cs" />
+    <Compile Include="Models\HR\Organization.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,6 +235,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Docs\Migartions.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -258,6 +290,36 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Organizations\Create.cshtml" />
+    <Content Include="Views\Organizations\Delete.cshtml" />
+    <Content Include="Views\Organizations\Details.cshtml" />
+    <Content Include="Views\Organizations\Edit.cshtml" />
+    <Content Include="Views\Organizations\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Designations\Create.cshtml" />
+    <Content Include="Views\Designations\Delete.cshtml" />
+    <Content Include="Views\Designations\Details.cshtml" />
+    <Content Include="Views\Designations\Edit.cshtml" />
+    <Content Include="Views\Designations\Index.cshtml" />
+    <Content Include="Views\EmployeeTypes\Create.cshtml" />
+    <Content Include="Views\EmployeeTypes\Delete.cshtml" />
+    <Content Include="Views\EmployeeTypes\Details.cshtml" />
+    <Content Include="Views\EmployeeTypes\Edit.cshtml" />
+    <Content Include="Views\EmployeeTypes\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Holidays\Create.cshtml" />
+    <Content Include="Views\Holidays\Delete.cshtml" />
+    <Content Include="Views\Holidays\Details.cshtml" />
+    <Content Include="Views\Holidays\Edit.cshtml" />
+    <Content Include="Views\Holidays\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +336,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\HrMigrations\201805101140026_InitialCreate.resx">
+      <DependentUpon>201805101140026_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\HrMigrations\201805101512088_HolidayAdded.resx">
+      <DependentUpon>201805101512088_HolidayAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\HrMigrations\201805101519130_holiday_Yearadded.resx">
+      <DependentUpon>201805101519130_holiday_Yearadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\Identity\201805101414129_Initial_Identity.resx">
+      <DependentUpon>201805101414129_Initial_Identity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

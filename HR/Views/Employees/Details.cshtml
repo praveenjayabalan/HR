@@ -1,0 +1,154 @@
+﻿@model HR.Models.HR.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation.Designation_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation.Designation_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType.EmployeeTyp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType.EmployeeTyp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Of_Birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Of_Birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emergency_Contact_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emergency_Contact_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualifications)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qualifications)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Actv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Actv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Del)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Del)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crtd_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crtd_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crtd_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crtd_ts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mod_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mod_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mod_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mod_ts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowVersion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,90 @@
+﻿@model HR.Models.HR.EmployeeType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeTyp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeTyp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Actv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Actv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_Del)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Del)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crtd_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crtd_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crtd_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crtd_ts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mod_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mod_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mod_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mod_ts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowVersion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeTypeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

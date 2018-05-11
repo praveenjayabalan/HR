@@ -1,0 +1,129 @@
+﻿@model IEnumerable<HR.Models.HR.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation.Designation_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeType.EmployeeTyp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Of_Birth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emergency_Contact_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualifications)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Actv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Del)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crtd_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crtd_ts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mod_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mod_ts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation.Designation_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeType.EmployeeTyp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Of_Birth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emergency_Contact_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qualifications)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Actv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Del)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crtd_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crtd_ts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mod_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mod_ts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RowVersion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeID })
+        </td>
+    </tr>
+}
+
+</table>

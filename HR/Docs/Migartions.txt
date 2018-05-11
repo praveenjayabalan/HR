@@ -1,0 +1,12 @@
+﻿Enable-Migrations -ContextTypeName EmployeeDBContext -MigrationsDirectory Migrations\HrMigrations
+
+add-Migration -ConfigurationTypeName HR.Migrations.HrMigrations.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName HR.Migrations.HrMigrations.Configuration
+
+============================================================================================================================================
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+
+add-Migration -ConfigurationTypeName HR.Migrations.Identity.Configuration "InitialIdentity"
+
+update-database -ConfigurationTypeName HR.Migrations.Identity.Configuration
